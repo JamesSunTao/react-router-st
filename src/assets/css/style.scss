@@ -1,0 +1,32 @@
+/*reset*/
+html,body{ height: 100%;}
+body,div, p, dl, dd, pre, h1, h2, h3, h4, h5, h6,form,ul, ol{margin: 0px;font-weight:normal;list-style: none;}
+ul {padding: 0;}
+/*排版*/
+body{position: relative;color:#333; font:14px/1.5 "\5FAE\8F6F\96C5\9ED1";padding-top: 80px;}
+a{color:inherit;}
+a:link,a:active,a:hover,a:focus,:focus{text-decoration: none;outline:none;}
+img,iframe{border:none;display:inline}
+/*form*/
+input, button, option, textarea, select, fieldset{box-sizing:border-box; padding: 0 0 0 5px;vertical-align: middle;font:inherit;outline: none;}
+button{cursor:pointer;}
+.head{
+    background-color: #20232a; color: #ffffff; position: fixed; z-index: 1;width: 100%; top: 0;left: 0; height: 60px;
+   a{color:#fff;}
+}
+
+.foot{
+   background-color: #20232a;
+   color: #ffffff;
+   padding: 50px 0;
+   margin-top: 60px;
+}
+
+.main-warp{min-height: 400px;background: rgba(0,0,0,0.5);
+      .home{
+         min-height: 300px;background: pink;
+      }
+      .about{
+         min-height: 300px;background: yellow;
+      }
+}
