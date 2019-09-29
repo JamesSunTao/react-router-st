@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import ReactDom from 'react-dom';
-import {Switch, Link, Route, BrowserRouter} from 'react-router-dom';
-
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+//BrowserRouter, HashRouter,MemoryRouter,NavLink,StaticRouter
 
 import Header from './component/header';
 import Foot from './component/foot';
@@ -18,18 +18,23 @@ class App extends Component {
    render(){
        return (
            <div>
-               <Header/>
-                <div>
-                    <Link to="/about">点击跳转到列表</Link>
+                <Header/>
+                <Router>
+                    <div>
+                        <ul>
+                            <li><Link to="/">首页</Link></li>
+                            <li><Link to="/about/suntao">关于</Link></li>
+                        
+                        </ul>
 
-                    <BrowserRouter>
-                        <Switch>
-                            <Route  path="/" component={Home}/> 
-                            <Route  path="/about" component={About}/> 
-                        </Switch>
-                    </BrowserRouter>
-                </div>
-               <Foot/>
+                        <hr/>
+
+                        <Route exact path="/" component={Home}/>
+                        <Route exact path="/about/:name" component={About}/>
+                        
+                    </div>
+                </Router>
+                <Foot/>
             
            </div>
        )
